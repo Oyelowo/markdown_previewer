@@ -1,0 +1,6 @@
+.Textarea {
+    padding: 15px;
+    width: 50vw;
+    height: 100vh;
+    overflow: auto;
+}
