@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 import Editor from './component/Editor/Editor';
-import Previewer from './component/Previewer/Previewer';
+import Preview from './component/Preview/Preview';
 import marked from 'marked';
+import { sampleText } from './SampleText';
 
 class App extends Component {
   state = {
-    markdownInput: ''
+    markdownInput: sampleText
   }
 
   onChangeHandler = (event) => {
@@ -16,8 +17,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Editor value={this.state.markdownInput} onChange={this.onChangeHandler}/>
-        <Previewer className='height' output={marked(this.state.markdownInput)}  />
+        <Editor id='editor' value={this.state.markdownInput} onChange={this.onChangeHandler}/>
+        <Preview className='height' id='preview' output={marked(this.state.markdownInput)}  />
       </div>
     );
   }
