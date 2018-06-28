@@ -2,9 +2,10 @@ export const sampleText =
 `# Welcome to my React Markdown Previewer!
 **This proect was built with ReactJs and markedJS**
 
-Coded by: __Oyelowo Oyedayo__
+## Coded by: __Oyelowo Oyedayo__
 
-LinkedIn: [Oyelowo Oyedayo](https://www.linkedin.com/in/oyelowo-oyedayo/)
+### LinkedIn: [Oyelowo Oyedayo](https://www.linkedin.com/in/oyelowo-oyedayo/)
+
 ## Feel free to edit in this editor. You can clear everything. 
 __You can also check the html code by selecting the dropdown menu in the Previewer windows__
 
