@@ -22,3 +22,17 @@
     margin: auto;
     margin-top: 5px;
 }
+
+
+@media(max-width: 768px){
+    .EditorSmallScreen {
+        padding: 10px 15px 100vh 15px;
+        width: 100%;
+        height: 46vh;
+        overflow: auto;
+        box-sizing: border-box;
+        margin: auto;
+        background: #ffe;
+    }
+    
+}

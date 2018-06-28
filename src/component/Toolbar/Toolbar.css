@@ -53,3 +53,10 @@
     font-family: 'Markazi Text', serif;
     font-weight: bold;
 }
+
+@media(max-width: 768px){
+    .ToolbarSmall{
+        width: 98vw;
+    }
+    
+}

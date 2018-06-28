@@ -16,7 +16,7 @@ const editor = (props) => {
                 id="editor"
                 placeholder='Enter something in Github Markdown Format'
                 value={props.value}
-                onChange={props.onChange}/>
+                onChange={props.onChange}></textarea>
         </div>
     )
 }
