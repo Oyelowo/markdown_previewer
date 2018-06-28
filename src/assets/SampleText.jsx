@@ -1,6 +1,6 @@
 export const sampleText = 
 `# Welcome to my React Markdown Previewer!
-**This proect was built with ReactJs and markedJS**
+**This project was built with ReactJs and markedJS**
 
 ## Coded by: Oyelowo Oyedayo
 
