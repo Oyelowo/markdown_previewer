@@ -18,7 +18,7 @@ const preview = (props) => {
     }}></div>;
 
     if (props.windowType === 'htmlCode') {
-        outputWindow = <div>{props.test}</div>
+        outputWindow = <div><pre>{props.test}</pre></div>
     }
     return (
         <div className={PreviewFullScreen}>
