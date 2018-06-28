@@ -1,16 +1,16 @@
-.SplitScreen{
+.SplitScreen {
   display: flex;
   overflow: hidden;
+  height: 100vh;
 }
 
 
 
-
-.HideEditor{
+.HideEditor {
   display: none
 }
 
-.HidePreview{
+.HidePreview {
   display: none
 }
 
@@ -24,15 +24,14 @@ th {
   padding: 6px;
 }
 
-pre, code{
+pre,
+code {
   background: rgb(228, 224, 224);
   color: rgb(73, 113, 245);
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-pre{
+pre {
   padding: 15px;
 }
-
-

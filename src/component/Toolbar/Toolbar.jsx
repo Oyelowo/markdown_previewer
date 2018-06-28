@@ -10,7 +10,7 @@ const Toolbar = (props) => {
         ? 'ToolbarLarge'
         : 'ToolbarSmall';
     return (
-        <div className={toolBarSizeToggler}>{screenToggleIcon}</div>
+        <div className={toolBarSizeToggler}> <span className='windowPan'>{props.windowPan}</span>{screenToggleIcon}</div>
     )
 }
 

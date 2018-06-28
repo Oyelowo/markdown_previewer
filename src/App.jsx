@@ -40,16 +40,17 @@ class App extends Component {
 
     let HidePreview = EditorIsFullScreen
       ? 'HidePreview'
-      : null
+      : null;
 
     let HideEditor = PreviewIsFullScreen
       ? 'HideEditor'
-      : null
+      : null;
 
     return (
       <div className={screenSizeConverter}>
         <div className={HideEditor}>
           <Editor
+            windowPan='Editor'
             isFullscreen={this.state.EditorIsFullScreen}
             onClick={this.toggleEditorScreenSize}
             id='editor'
@@ -57,9 +58,9 @@ class App extends Component {
             onChange={this.onChangeHandler}/>
         </div>
 
-
         <div className={HidePreview}>
           <Preview
+            windowPan='Previewer'
             isFullscreen={this.state.PreviewIsFullScreen}
             onClick={this.togglePreviewScreenSize}
             id='preview'

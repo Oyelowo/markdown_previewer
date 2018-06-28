@@ -1,19 +1,20 @@
 .ToolbarSmall {
     width: 49vw;
-    height: 5vh;
-    background: coral;
+    height: 7vh;
+    background-color: #008B8B;
+    color: #fffff0;
     padding-right: 13px;
     box-sizing: border-box;
     text-align: end;
     cursor: pointer;
-    border: 1px solid blue;
 }
 
 .ToolbarLarge {
-    width:  90vw;
+    width: 90vw;
     height: 8vh;
     margin: auto;
-    background: coral;
+    background-color: #008B8B;
+    color: #fffff0;
     padding-right: 9px;
     box-sizing: border-box;
     text-align: end;
@@ -25,10 +26,30 @@
     z-index: 100;
 }
 
-.fa-compress{
+.fa-compress {
     font-size: 7vh;
 }
 
-.fa-arrows-alt{
+.fa-compress:hover {
+    color: #eaeaea;
+    opacity: 0.8;
+}
+
+.fa-arrows-alt {
     font-size: 4vh;
+}
+
+.fa-arrows-alt:hover {
+    color: #eaeaea;
+    opacity: 0.8;
+}
+
+.windowPan{
+    float: left;
+    margin-left: 10px;
+    height: 100%;
+    font-size: 5vh;
+    font-stretch:condensed;
+    font-family: 'Markazi Text', serif;
+    font-weight: bold;
 }
