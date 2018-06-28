@@ -12,6 +12,7 @@ class App extends Component {
     PreviewIsFullScreen: false,
     selectWindow: 'previewer'
   }
+  
 
   onChangeHandler = (event) => {
     this.setState({markdownInput: event.target.value})
@@ -70,7 +71,7 @@ class App extends Component {
           <Editor
           
             windowPan='Editor'
-            isFullscreen={this.state.EditorIsFullScreen}
+            isFullscreen={EditorIsFullScreen}
             onClick={this.toggleEditorScreenSize}
             id='editor'
             value={this.state.markdownInput}
@@ -81,7 +82,7 @@ class App extends Component {
           <Preview
             windowPan={selectWindowsOptions}
             windowType={selectWindow}
-            isFullscreen={this.state.PreviewIsFullScreen}
+            isFullscreen={PreviewIsFullScreen}
             onClick={this.togglePreviewScreenSize}
             id='preview'
             output={marked(this.state.markdownInput, {

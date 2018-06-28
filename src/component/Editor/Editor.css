@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: auto;
     background: #ffe;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .EditorFullScreen{
@@ -16,7 +16,7 @@
     padding: 10vh 5px 80vh 5px;
     z-index: 1;
     background: #ffe;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .largeWidthContainer{
@@ -32,6 +32,11 @@
         height: 45vh;
         padding: 0px 1px 1px 1px;
         margin: auto;
+        font-size: 1rem;
+    }
+
+    .EditorFullScreen{
+        font-size: 1rem;
     }
     
 }
