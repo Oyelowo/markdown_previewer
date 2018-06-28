@@ -22,15 +22,19 @@
     .PreviewHalfScreen {
         padding: 0px 1px 2px 1px;
         width: 97vw;
+        height: 40vh;
         margin: auto;
     }
     .PreviewFullScreen {
-        width: 90vw;
+        width: 97vw;
+        margin: auto;
         background: inherit;
         border: none;
+        font-size: 0.7rem;
     }
    
     pre {
         background: inherit;
+        font-size: 0.7rem
     }
 }
