@@ -8,13 +8,10 @@ body {
   height: 100vh;
 }
 
-.HideEditor {
+.hide {
   display: none
 }
 
-.HidePreview {
-  display: none
-}
 
 table {
   border-collapse: collapse;
@@ -58,8 +55,12 @@ select{
 
 @media(max-width: 768px){
   .SplitScreen {
-    display: flex;
-    flex-direction: column;
+    display: block;
     overflow: auto;
+    height: 100vh;
   }
+
+  /* .Prev{
+    height: 40vh;
+  } */
 }

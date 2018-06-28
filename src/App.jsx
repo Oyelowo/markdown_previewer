@@ -41,11 +41,11 @@ class App extends Component {
       : 'SplitScreen';
 
     let HidePreview = EditorIsFullScreen
-      ? 'HidePreview'
+      ? 'hide'
       : null;
 
     let HideEditor = PreviewIsFullScreen
-      ? 'HideEditor'
+      ? 'hide'
       : null;
 
     let selectWindowsOptions = <select
@@ -62,10 +62,13 @@ class App extends Component {
     const markedJsRenderer = new marked.Renderer();
     markedJsRenderer.link = (href, title, text) => `<a target="_blank" href="${href}">${text} </a>`;
 
+    
     return (
       <div className={screenSizeConverter}>
+      
         <div className={HideEditor}>
           <Editor
+          
             windowPan='Editor'
             isFullscreen={this.state.EditorIsFullScreen}
             onClick={this.toggleEditorScreenSize}

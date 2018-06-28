@@ -1,5 +1,5 @@
 .PreviewHalfScreen {
-    padding: 0px 15px 100vh 15px;
+    padding: 0px 15px 80vh 15px;
     width: 49vw;
     height: 94vh;
     overflow: auto;
@@ -7,25 +7,30 @@
     background: rgb(250, 252, 252);
 }
 
-.PreviewFullScreen{
+.PreviewFullScreen {
     width: 90vw;
     margin: auto;
     border: 1px solid black;
     background: rgb(250, 252, 252);
 }
 
-.FullScreenPadding{
-    padding: 10vh 5px 1000px 5px;
+.FullScreenPadding {
+    padding: 7vh 15px 80vh 15px;
 }
 
-
-
-@media(max-width: 768px){
-    .PreviewHalfScreen{
-        width: 100vw;
-        height: 45vh;
-        overflow: auto;
+@media(max-width: 768px) {
+    .PreviewHalfScreen {
+        padding: 0px 1px 2px 1px;
+        width: 97vw;
+        margin: auto;
     }
-    
+    .PreviewFullScreen {
+        width: 90vw;
+        background: inherit;
+        border: none;
+    }
+   
+    pre {
+        background: inherit;
+    }
 }
-

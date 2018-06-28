@@ -1,5 +1,5 @@
 .EditorSmallScreen {
-    padding: 10px 15px 100vh 15px;
+    padding: 10px 15px 80vh 15px;
     width: 50vw;
     height: 95vh;
     overflow: auto;
@@ -10,10 +10,10 @@
 }
 
 .EditorFullScreen{
-    width: 90vw;
+    min-width: 90vw;
     box-sizing: border-box;
     min-height: 100vh;
-    padding: 10vh 5px 100% 5px;
+    padding: 10vh 5px 80vh 5px;
     z-index: 1;
     background: #ffe;
     font-size: 1rem;
@@ -27,14 +27,11 @@
 
 
 @media(max-width: 768px){
-    .EditorSmallScreen {
-        padding: 10px 15px 100vh 15px;
-        width: 100%;
-        height: 46vh;
-        overflow: auto;
-        box-sizing: border-box;
+    .EditorSmallScreen{
+        min-width: 100vw;
+        height: 45vh;
+        padding: 0px 1px 1px 1px;
         margin: auto;
-        background: #ffe;
     }
     
 }
