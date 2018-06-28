@@ -47,11 +47,12 @@ pre {
 
 select{
   height: 80%;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: bold;
   font-family: inherit;
   background: #008B8B;
   color: white;
+  cursor: pointer;
 }
 
 
