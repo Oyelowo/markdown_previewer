@@ -59,8 +59,8 @@ class App extends Component {
     // enable line breaks with returh button. This is set later  in the Preview tag
     // but can also be set as below: marked.setOptions({breaks: true}); include
     // target="_blank" inside the anchor tag.
-    const markedRenderer = new marked.Renderer();
-    markedRenderer.link = (href, title, text) => `<a target="_blank" href="${href}">${text}` + '</a>';
+    const markedJsRenderer = new marked.Renderer();
+    markedJsRenderer.link = (href, title, text) => `<a target="_blank" href="${href}">${text} </a>`;
 
     return (
       <div className={screenSizeConverter}>
@@ -82,7 +82,7 @@ class App extends Component {
             onClick={this.togglePreviewScreenSize}
             id='preview'
             output={marked(this.state.markdownInput, {
-            renderer: markedRenderer,
+            renderer: markedJsRenderer,
             breaks: true
           })}
             htmlCode={marked(this.state.markdownInput)}/></div>
