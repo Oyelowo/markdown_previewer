@@ -3,7 +3,7 @@ import './App.css';
 import Editor from './component/Editor/Editor';
 import Preview from './component/Preview/Preview';
 import marked from 'marked';
-import {sampleText} from './SampleText';
+import {sampleText} from './assets/SampleText';
 
 class App extends Component {
   state = {
@@ -57,13 +57,11 @@ class App extends Component {
     </select>
 
     // enable line breaks with returh button. This is set later  in the Preview tag
-    //but can also be set as below:
-    // marked.setOptions({breaks: true});
-
-    // include target="_blank" inside the anchor tag.
+    // but can also be set as below: marked.setOptions({breaks: true}); include
+    // target="_blank" inside the anchor tag.
     const markedRenderer = new marked.Renderer();
     markedRenderer.link = (href, title, text) => `<a target="_blank" href="${href}">${text}` + '</a>';
-    
+
     return (
       <div className={screenSizeConverter}>
         <div className={HideEditor}>
@@ -83,7 +81,10 @@ class App extends Component {
             isFullscreen={this.state.PreviewIsFullScreen}
             onClick={this.togglePreviewScreenSize}
             id='preview'
-            output={marked(this.state.markdownInput, {renderer: markedRenderer, breaks: true})}
+            output={marked(this.state.markdownInput, {
+            renderer: markedRenderer,
+            breaks: true
+          })}
             htmlCode={marked(this.state.markdownInput)}/></div>
 
       </div>
