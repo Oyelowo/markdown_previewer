@@ -6,9 +6,11 @@ const editor = (props) => {
     let screenSizeConverter = props.isFullscreen
         ? 'EditorFullScreen'
         : 'EditorSmallScreen';
+
+        let largeWidthContainer = props.isFullscreen ? 'largeWidthContainer' : null;
     return (
-        <div>
-            <Toolbar {...props}/>
+        <div className={largeWidthContainer}>
+            <Toolbar  {...props}/>
             <textarea
                 className={screenSizeConverter}
                 id="editor"

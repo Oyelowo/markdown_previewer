@@ -3,10 +3,8 @@
   overflow: hidden;
 }
 
-.FullScreen{
-  flex-direction: column;
-  overflow: hidden;
-}
+
+
 
 .HideEditor{
   display: none

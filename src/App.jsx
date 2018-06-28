@@ -8,8 +8,8 @@ import {sampleText} from './SampleText';
 class App extends Component {
   state = {
     markdownInput: sampleText,
-    EditorIsFullscreen: false,
-    PreviewIsFullscreen: false
+    EditorIsFullScreen: false,
+    PreviewIsFullScreen: false
   }
 
   onChangeHandler = (event) => {
@@ -18,39 +18,52 @@ class App extends Component {
 
   toggleEditorScreenSize = () => {
     this.setState({
-      EditorIsFullscreen: !this.state.EditorIsFullscreen
+      EditorIsFullScreen: !this.state.EditorIsFullScreen
     });
   }
 
   togglePreviewScreenSize = () => {
     this.setState({
-      PreviewIsFullscreen: !this.state.PreviewIsFullscreen
+      PreviewIsFullScreen: !this.state.PreviewIsFullScreen
     });
   }
 
   render() {
 
-    const {EditorIsFullscreen, PreviewFullScreen} = this.state;
+    const {EditorIsFullScreen, PreviewIsFullScreen} = this.state;
     // let screenSizeConverter = EditorIsFullscreen || PreviewFullScreen   ?
     // 'FullScreen'   : 'SplitScreen';
 
-    let screenSizeConverter = EditorIsFullscreen || PreviewFullScreen
+    let screenSizeConverter = EditorIsFullScreen || PreviewIsFullScreen
       ? 'FullScreen'
       : 'SplitScreen';
 
+    let HidePreview = EditorIsFullScreen
+      ? 'HidePreview'
+      : null
+
+    let HideEditor = PreviewIsFullScreen
+      ? 'HideEditor'
+      : null
+
     return (
       <div className={screenSizeConverter}>
-        <Editor
-          isFullscreen={this.state.EditorIsFullscreen}
-          onClick={this.toggleEditorScreenSize}
-          id='editor'
-          value={this.state.markdownInput}
-          onChange={this.onChangeHandler}/>
-        <Preview
-          isFullscreen={this.state.PreviewIsFullscreen}
-          onClick={this.togglePreviewScreenSize}
-          id='preview'
-          output={marked(this.state.markdownInput)}className='height'/>
+        <div className={HideEditor}>
+          <Editor
+            isFullscreen={this.state.EditorIsFullScreen}
+            onClick={this.toggleEditorScreenSize}
+            id='editor'
+            value={this.state.markdownInput}
+            onChange={this.onChangeHandler}/>
+        </div>
+
+
+        <div className={HidePreview}>
+          <Preview
+            isFullscreen={this.state.PreviewIsFullScreen}
+            onClick={this.togglePreviewScreenSize}
+            id='preview'
+            output={marked(this.state.markdownInput)}/></div>
       </div>
     );
   }

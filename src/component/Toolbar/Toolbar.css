@@ -2,18 +2,19 @@
     width: 49vw;
     height: 5vh;
     background: coral;
-    padding: 3px;
+    padding-right: 13px;
     box-sizing: border-box;
     text-align: end;
+    font-size: 150%;
     cursor: pointer;
 }
 
 .ToolbarLarge {
-    width:  99vw;
+    width:  90vw;
     height: 5vh;
+    margin: auto;
     background: coral;
     padding: 3px;
-    box-sizing: border-box;
     text-align: end;
     cursor: pointer;
 }

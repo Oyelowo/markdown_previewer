@@ -4,9 +4,11 @@ import Toolbar from '../Toolbar/Toolbar';
 // import Auxi from '../../hoc/Auxi/Auxi';
 
 const preview = (props) => {
-    let screenSizeConverter = props.isFullscreen ? 'PreviewFullScreen': 'Preview';
+    let screenSizeConverter = !props.isFullscreen ? 'Preview' : null;
+    let PreviewFullScreen = props.isFullscreen ? 'PreviewFullScreen' : null;
+
     return (
-        <div>
+        <div className={PreviewFullScreen}>
             <Toolbar {...props}/>
             <div
                 className= {screenSizeConverter}
