@@ -1,3 +1,7 @@
+body{
+  background: 	rgb(236, 241, 241);
+}
+
 .SplitScreen {
   display: flex;
   overflow: hidden;

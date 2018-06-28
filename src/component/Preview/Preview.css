@@ -4,12 +4,14 @@
     height: 94vh;
     overflow: auto;
     box-sizing: border-box;
+    background: rgb(250, 252, 252);
 }
 
 .PreviewFullScreen{
     width: 90vw;
     margin: auto;
     border: 1px solid black;
+    background: rgb(250, 252, 252);
 }
 
 .FullScreenPadding{

@@ -5,6 +5,7 @@
     overflow: auto;
     box-sizing: border-box;
     margin: auto;
+    background: #ffe;
 }
 
 .EditorFullScreen{
@@ -13,6 +14,7 @@
     min-height: 100vh;
     padding: 10vh 5px 100% 5px;
     z-index: 1;
+    background: #ffe;
 }
 
 .largeWidthContainer{
