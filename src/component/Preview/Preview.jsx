@@ -4,19 +4,30 @@ import Toolbar from '../Toolbar/Toolbar';
 // import Auxi from '../../hoc/Auxi/Auxi';
 
 const preview = (props) => {
-    let screenSizeConverter = !props.isFullscreen ? 'PreviewHalfScreen' : 'FullScreenPadding';
-    let PreviewFullScreen = props.isFullscreen ? 'PreviewFullScreen' : null;
+    let screenSizeConverter = !props.isFullscreen
+        ? 'PreviewHalfScreen'
+        : 'FullScreenPadding';
+    let PreviewFullScreen = props.isFullscreen
+        ? 'PreviewFullScreen'
+        : null;
 
+    let outputWindow = <div
+        id='preview'
+        dangerouslySetInnerHTML={{
+        __html: props.output
+    }}></div>;
+
+    if (props.windowType === 'htmlCode') {
+        outputWindow = <div>{props.test}</div>
+    }
     return (
         <div className={PreviewFullScreen}>
             <Toolbar {...props}/>
-            <div
-                className= {screenSizeConverter}
-                id='preview'
-                dangerouslySetInnerHTML={{
-                __html: props.output
-            }}></div>
 
+            <div className={screenSizeConverter}>
+
+                {outputWindow}
+            </div>
         </div>
     )
 }

@@ -45,6 +45,15 @@ pre {
   padding: 15px;
 }
 
+select{
+  height: 80%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: inherit;
+  background: #008B8B;
+  color: white;
+}
+
 
 @media(max-width: 768px){
   .SplitScreen {

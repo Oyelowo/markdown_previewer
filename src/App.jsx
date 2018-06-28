@@ -9,7 +9,8 @@ class App extends Component {
   state = {
     markdownInput: sampleText,
     EditorIsFullScreen: false,
-    PreviewIsFullScreen: false
+    PreviewIsFullScreen: false,
+    selectWindow: 'previewer'
   }
 
   onChangeHandler = (event) => {
@@ -28,9 +29,13 @@ class App extends Component {
     });
   }
 
+  selectChangeHandler = (event) => {
+    this.setState({selectWindow: event.target.value})
+  }
+
   render() {
 
-    const {EditorIsFullScreen, PreviewIsFullScreen} = this.state;
+    const {EditorIsFullScreen, PreviewIsFullScreen, selectWindow} = this.state;
     // let screenSizeConverter = EditorIsFullscreen || PreviewFullScreen   ?
     // 'FullScreen'   : 'SplitScreen';
 
@@ -46,6 +51,13 @@ class App extends Component {
       ? 'HideEditor'
       : null;
 
+    let selectWindowsOptions = <select
+      defaultValue={selectWindow}
+      onChange={this.selectChangeHandler}
+      name="windowsPan">
+      <option value="previewer">Previewer</option>
+      <option value="htmlCode">Html Code</option>
+    </select>
     return (
       <div className={screenSizeConverter}>
         <div className={HideEditor}>
@@ -60,11 +72,14 @@ class App extends Component {
 
         <div className={HidePreview}>
           <Preview
-            windowPan='Previewer'
+            windowPan={selectWindowsOptions}
+            windowType={selectWindow}
             isFullscreen={this.state.PreviewIsFullScreen}
             onClick={this.togglePreviewScreenSize}
             id='preview'
-            output={marked(this.state.markdownInput)}/></div>
+            output={marked(this.state.markdownInput)}
+            test={marked(this.state.markdownInput)}/></div>
+
       </div>
     );
   }
