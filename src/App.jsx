@@ -53,8 +53,8 @@ class App extends Component {
       defaultValue={selectWindow}
       onChange={this.selectChangeHandler}
       name="windowsPan">
-      <option value="previewer">Previewer</option>
-      <option value="htmlCode">Html Code</option>
+      <option className='option' value="previewer">Previewer</option>
+      <option className='option' value="htmlCode">Html Code</option>
     </select>
 
     // enable line breaks with returh button. This is set later  in the Preview tag

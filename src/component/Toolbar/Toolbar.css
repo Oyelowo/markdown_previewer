@@ -29,6 +29,7 @@
 .fa-compress {
     font-size: 7vh;
     padding-right: 24px;
+    transition: opacity 0.3s, color 0.2s;
 }
 
 .fa-compress:hover {
@@ -38,6 +39,7 @@
 
 .fa-arrows-alt {
     font-size: 4vh;
+    transition: opacity 0.3s, color 0.2s;
 }
 
 .fa-arrows-alt:hover {

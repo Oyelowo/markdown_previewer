@@ -50,6 +50,13 @@ select{
   background: #008B8B;
   color: white;
   cursor: pointer;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s, background 0.2s;
+}
+
+select:not(.option):hover{
+  opacity: 0.9;
+  background: #65b4b4;
 }
 
 
