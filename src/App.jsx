@@ -36,9 +36,6 @@ class App extends Component {
   render() {
 
     const {EditorIsFullScreen, PreviewIsFullScreen, selectWindow} = this.state;
-    // let screenSizeConverter = EditorIsFullscreen || PreviewFullScreen   ?
-    // 'FullScreen'   : 'SplitScreen';
-
     let screenSizeConverter = EditorIsFullScreen || PreviewIsFullScreen
       ? 'FullScreen'
       : 'SplitScreen';
@@ -58,6 +55,15 @@ class App extends Component {
       <option value="previewer">Previewer</option>
       <option value="htmlCode">Html Code</option>
     </select>
+
+    // enable line breaks with returh button. This is set later  in the Preview tag
+    //but can also be set as below:
+    // marked.setOptions({breaks: true});
+
+    // include target="_blank" inside the anchor tag.
+    const markedRenderer = new marked.Renderer();
+    markedRenderer.link = (href, title, text) => `<a target="_blank" href="${href}">${text}` + '</a>';
+    
     return (
       <div className={screenSizeConverter}>
         <div className={HideEditor}>
@@ -77,8 +83,8 @@ class App extends Component {
             isFullscreen={this.state.PreviewIsFullScreen}
             onClick={this.togglePreviewScreenSize}
             id='preview'
-            output={marked(this.state.markdownInput)}
-            test={marked(this.state.markdownInput)}/></div>
+            output={marked(this.state.markdownInput, {renderer: markedRenderer, breaks: true})}
+            htmlCode={marked(this.state.markdownInput)}/></div>
 
       </div>
     );
