@@ -1,6 +1,19 @@
-.App{
+.SplitScreen{
   display: flex;
   overflow: hidden;
+}
+
+.FullScreen{
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.HideEditor{
+  display: none
+}
+
+.HidePreview{
+  display: none
 }
 
 table {
@@ -17,7 +30,6 @@ pre, code{
   background: rgb(228, 224, 224);
   color: rgb(73, 113, 245);
   border-radius: 5px;
-  /* padding: 5px; */
   box-sizing: border-box;
 }
 

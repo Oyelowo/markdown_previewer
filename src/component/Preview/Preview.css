@@ -1,7 +1,14 @@
 .Preview {
     padding: 5px 15px;
     width: 50vw;
-    max-height: 100vh;
+    max-height: 94vh;
     overflow: auto;
     box-sizing: border-box;
+    margin-top: 6vh;
 }
+
+.PreviewFullScreen{
+    width: 100vw;
+    height: 94vh;
+}
+

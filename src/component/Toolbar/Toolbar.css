@@ -1,0 +1,19 @@
+.ToolbarSmall {
+    width: 49vw;
+    height: 5vh;
+    background: coral;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: end;
+    cursor: pointer;
+}
+
+.ToolbarLarge {
+    width:  99vw;
+    height: 5vh;
+    background: coral;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: end;
+    cursor: pointer;
+}

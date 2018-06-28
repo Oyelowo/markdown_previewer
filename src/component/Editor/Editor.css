@@ -1,7 +1,12 @@
-.Textarea {
+.EditorSmallScreen {
     padding: 15px;
     width: 50vw;
-    height: 100vh;
+    height: 95vh;
     overflow: auto;
     box-sizing: border-box;
+}
+
+.EditorFullScreen{
+    width: 100vw;
+    height: 94vh;
 }
