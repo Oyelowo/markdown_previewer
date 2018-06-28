@@ -9,7 +9,7 @@
 }
 
 .EditorFullScreen{
-    width: 100%;
+    width: 90vw;
     box-sizing: border-box;
     min-height: 100vh;
     padding: 10vh 5px 100% 5px;
