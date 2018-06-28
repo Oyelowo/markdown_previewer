@@ -1,16 +1,19 @@
-.Preview {
-    padding: 5px 15px;
+.PreviewHalfScreen {
+    padding: 0px 15px 100vh 15px;
     width: 50vw;
     max-height: 94vh;
     overflow: auto;
     box-sizing: border-box;
-    margin-top: 6vh;
 }
 
 .PreviewFullScreen{
     width: 90vw;
     margin: auto;
-    margin-top: 5px
+    border: 1px solid black;
+}
+
+.FullScreenPadding{
+    padding: 10vh 5px 100vh 5px;
 }
 
 

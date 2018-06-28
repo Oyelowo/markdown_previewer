@@ -4,7 +4,7 @@ import Toolbar from '../Toolbar/Toolbar';
 // import Auxi from '../../hoc/Auxi/Auxi';
 
 const preview = (props) => {
-    let screenSizeConverter = !props.isFullscreen ? 'Preview' : null;
+    let screenSizeConverter = !props.isFullscreen ? 'PreviewHalfScreen' : 'FullScreenPadding';
     let PreviewFullScreen = props.isFullscreen ? 'PreviewFullScreen' : null;
 
     return (

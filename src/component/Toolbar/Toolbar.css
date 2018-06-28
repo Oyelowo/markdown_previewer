@@ -5,16 +5,30 @@
     padding-right: 13px;
     box-sizing: border-box;
     text-align: end;
-    font-size: 150%;
     cursor: pointer;
+    border: 1px solid blue;
 }
 
 .ToolbarLarge {
     width:  90vw;
-    height: 5vh;
+    height: 8vh;
     margin: auto;
     background: coral;
-    padding: 3px;
+    padding-right: 9px;
+    box-sizing: border-box;
     text-align: end;
     cursor: pointer;
+    font-size: 150%;
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 100;
+}
+
+.fa-compress{
+    font-size: 7vh;
+}
+
+.fa-arrows-alt{
+    font-size: 4vh;
 }

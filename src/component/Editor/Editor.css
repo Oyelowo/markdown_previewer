@@ -1,5 +1,5 @@
 .EditorSmallScreen {
-    padding: 15px;
+    padding: 10px 15px 100vh 15px;
     width: 50vw;
     height: 95vh;
     overflow: auto;
@@ -8,13 +8,16 @@
 }
 
 .EditorFullScreen{
-    width: 90vw;
+    width: 100%;
+    box-sizing: border-box;
     min-height: 100vh;
     overflow: hidden;
+    padding: 10vh 5px 100% 5px;
+    z-index: 1;
 }
 
 .largeWidthContainer{
     width: 90vw;
     margin: auto;
-    margin-top: 5px
+    margin-top: 5px;
 }
